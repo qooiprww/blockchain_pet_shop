@@ -40,11 +40,21 @@ contract Adoption {
         return pets;
     }
 
+    function filterPetsByBreed(string breed) public view returns (uint256[] memory) {
+        uint256[] memory result;
+        for(int i = 0; i < petFeatures.length, i++ ){
+            if(petFeatures[i] == breed){
+                result.push(i);
+            }
+        }
+        return result;
+    }
+
     function registerPet(
-        string calldata breed,
-        string calldata name,
-        string calldata age
-    ) external returns (uint256) {
+        string memory breed,
+        string memory name,
+        string memory age
+    ) public returns (uint256) {
         pets.push(currPetId);
         petFeatures[currPetId]["breed"] = breed;
         petFeatures[currPetId]["age"] = age;
