@@ -23,13 +23,14 @@
   <nav class="navbar navbar-default ">
     <div class="container-fluid">
       <div class="row">
-        <h2 class="navbar-header col-sm-6 col-md-4 col-lg-6">Pete's Pet Shop</h2>
-        <form class="navbar-form navbar-right col-sm-6 col-md-4 col-lg-3" style="margin-top:20px;" id="donation">
-          <div class="input-group">
-            <span class="input-group-addon" id="basic-addon2">Ether</span>
+        <h2 class="text-left navbar-header col-sm-6 col-md-4 col-lg-4">Pete's Pet Shop</h2>
+        <h2 class="text-center navbar-left popular-dog col-sm-6 col-md-4 col-lg-4"></h2>
+        <form class="navbar-form navbar-right col-sm-6 col-md-4 col-lg-4" style="margin-top:20px;" id="donation">
+          <div class="form-group">
+            <span class="form-group-addon" id="basic-addon2">Ether</span>
             <input type="text" class="form-control" name="Donation Amount" placeholder="Donation Amount"
               id="donation-amount" value="" aria-describedby="basic-addon2" />
-            <span class="input-group-btn">
+            <span class="form-group-btn">
               <button type="submit" class="btn btn-default btn-donate" type="button">Donate!</button>
             </span>
           </div>
@@ -38,33 +39,73 @@
     </div>
 
   </nav>
-
-  <div id="petsRow" class="row">
-    <div id="petForm">
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="panel panel-default panel-pet">
+  <div id="registerRow" class="row">
+    <div id="register">
+      <div class="col-md-2 col-lg-3">
+        <div class="panel panel-default panel-adoption-stats">
+          <div class="panel-heading">
+            <h3 class="panel-title">Adoption Stats</h3>
+          </div>
+          <div class="panel-body"><br /><br /><br /><br /><br /><br />
+            <strong>Most Adopted Breed</strong>: <span class="stat-breed">Golden Retriever</span><br /><br />
+            <strong>Most Adopted Age</strong>: <span class="stat-age">3</span><br /><br /><br /><br /><br /><br />
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-8 col-lg-6">
+        <div class="panel panel-default panel-register-pet">
           <form class="form " id="register-pet">
             <div class="panel-heading">
-              <h3 class="panel-title">Scrappy</h3>
+              <h3 class="panel-title">Register New Pets</h3>
             </div>
-
             <div class="panel-body">
-              <img alt="140x140" data-src="holder.js/140x140" class="img-rounded img-center" style="width: 100%;"
-                src="https://animalso.com/wp-content/uploads/2017/01/Golden-Retriever_6.jpg"
-                data-holder-rendered="true">
-              <br /><br />
-              <strong>Breed</strong>: <span class="pet-breed">Golden Retriever</span><br />
-              <strong>Age</strong>: <span class="pet-age">3</span><br />
-              <strong>Location</strong>: <span class="pet-location">Warren, MI</span><br />
-              <strong>Votes</strong>: <span class="pet-vote">0</span><br /><br />
-              <button class="btn btn-default btn-adopt" type="button" data-id="0">Adopt</button>
-              <button class="btn btn-default btn-vote" type="button" data-id="0">Vote</button>
+              <input type="url" class="form-control" name="Image URL" placeholder="Must Be a Valid Image URL"
+                id="register-picture" /><br />
+              <input type="text" class="form-control" name="Name" placeholder="Name" id="register-name"
+                value="" /><br />
+              <input type="text" class="form-control" name="Age" placeholder="Age" id="register-age" value="" /><br />
+              <input type="text" class="form-control" name="Location" placeholder="Location" id="register-location"
+                value="" /><br />
+              <input type="text" class="form-control" name="Breed" placeholder="Breed" id="register-breed"
+                value="" /><br />
+              <button type="submit" class="btn btn-default btn-register" type="button">Register!</button>
             </div>
-
           </form>
         </div>
       </div>
+      <div class="col-md-2 col-lg-3">
+        <div class="panel panel-default panel-adoption-stats">
+          <div class="panel-heading">
+            <h3 class="panel-title">Adoption Stats</h3>
+          </div>
+          <div class="panel-body"><br /><br /><br /><br />
+            <form class="form" id="breed-filter-form">
+              <div class="input-group">
+                <span class="input-group-addon" id="basic-addon-breed">Breed</span>
+                <input type="text" class="form-control" name="Breed" placeholder="Filter By Breed" id="breed-filter"
+                  value="" aria-describedby="basic-addon-breed" />
+                <span class="input-group-btn">
+                  <button type="submit" class="btn btn-default btn-filter-breed" type="button">Filter</button>
+                </span>
+              </div>
+            </form><br /><br />
+            <form class="form" id="age-filter-form">
+              <div class="input-group">
+                <span class="input-group-addon" id="basic-addon-age">Age</span>
+                <input type="text" class="form-control" name="Age" placeholder="Filter By Age" id="age-filter" value=""
+                  aria-describedby="basic-addon-age" />
+                <span class="input-group-btn">
+                  <button type="submit" class="btn btn-default btn-filter-age" type="button">Filter</button>
+                </span>
+              </div>
+            </form><br /><br /><br /><br /><br />
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+  <div id="petsRow" class="row">
+
   </div>
   </div>
 
